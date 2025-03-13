@@ -1,0 +1,5 @@
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Data\Shared\bin\Debug\Shared.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Data\Shared\bin\Debug\Shared.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Data\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Data\Shared\obj\Debug\Shared.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Data\Shared\obj\Debug\Shared.pdb

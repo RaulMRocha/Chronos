@@ -1,0 +1,485 @@
+﻿<UserControl x:Class="ChronosDashboards.Dashboards.EmployeePerformance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChronosDashboards.Dashboards"
+             mc:Ignorable="d" 
+              d:DesignHeight="600" d:DesignWidth="1000" Background="#3B3B47">
+    <Grid Margin="15,5,15,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="277*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top Side -->
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="87*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="21*"/>
+            </Grid.RowDefinitions>
+
+            <Viewbox Stretch="Uniform"  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" >
+                <TextBlock>
+                    <TextBlock x:Name="lblCell" TextWrapping="Wrap" Text="226 - Horizontales" Foreground="White" />
+                </TextBlock>
+            </Viewbox>
+
+            <Viewbox Stretch="Uniform"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" >
+                <TextBlock>
+                    <TextBlock x:Name="lblFacility" TextWrapping="Wrap" Text=" Victoria" Foreground="#FF808083" />
+                </TextBlock>
+            </Viewbox>
+
+            <Image Source="/ChronosDashboards;component/Images/ChronosLogo45.png" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" Margin="0,10,0,0"/>
+        </Grid>
+
+
+        <!-- Left Side -->
+        <Grid x:Name="gLeftSide" Grid.Row="1" Grid.Column="0" Background="#FF373744">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="284*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid x:Name="gLayout" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="13*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Operation -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
+                    <TextBlock>
+                        <TextBlock x:Name="lblOperation" TextWrapping="Wrap" Text="RAM"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="1">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Operación"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="13*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Operation -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
+                    <TextBlock>
+                        <TextBlock x:Name="lblTotalByOp" TextWrapping="Wrap" Text="--"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="1">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Producción"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+
+            <!-- Totals -->
+            <Grid Grid.Row="2" Margin="10" Background="#FF30303D">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="79*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="79*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.3" BlurRadius="3" Color="#FF373744"/>
+                </Grid.Effect>
+                <!-- Defectos -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
+                    <TextBlock>
+                        <TextBlock x:Name="lblTotalDefects" TextWrapping="Wrap" Text="--"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="1">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Defectos"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+                <!-- Tiempo Perdido -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1">
+                    <TextBlock>
+                        <TextBlock x:Name="lblTotalDT" TextWrapping="Wrap" Text="--"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Tiempo Perdido"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+                <!-- Tiempo Perdido -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1">
+                    <TextBlock>
+                        <TextBlock x:Name="lblAttendancePercent" TextWrapping="Wrap" Text="--"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Asistencia"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+                <!-- Tiempo Perdido -->
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0">
+                    <TextBlock>
+                        <TextBlock x:Name="lblTotalByHourQty" TextWrapping="Wrap" Text="--"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Pzas/hr"  Foreground="#FF808083" />
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+
+        </Grid>
+
+        <!-- Right Side -->
+        <Grid x:Name="gRightSide" Grid.Row="1" Grid.Column="1" Background="#FF30303D">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="183*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="359*"/>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="gBestEmployee" Grid.Row="0" Grid.Column="0"  Margin="10,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="99*"/>
+                    <ColumnDefinition Width="161*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Name="gBestEmployeeProduction" Grid.Row="0" Grid.Column="0" Margin="10" Background="#FF373744">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="28*"/>
+                        <RowDefinition Height="108*"/>
+                        <RowDefinition Height="27*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Effect>
+                        <DropShadowEffect Color="#FF30303D" Opacity="0.2" BlurRadius="3"/>
+                    </Grid.Effect>
+
+                    <Viewbox Stretch="Uniform" Margin="10,2,10,0" Grid.Row="0" HorizontalAlignment="Center">
+                        <TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="Mejor Desempeño"  Foreground="White" />
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Image x:Name="imgBestEmployeePhoto" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="1"/>
+
+                    <Viewbox Stretch="Uniform" Margin="40,0,40,5" Grid.Row="2" HorizontalAlignment="Center">
+                        <TextBlock>
+                                <TextBlock x:Name="lblBestEmployeeName" TextWrapping="Wrap" Text="[Asociado 10]"  Foreground="White" />
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+
+                <Grid x:Name="gBestEmployeeInfo" Grid.Row="0" Grid.Column="1" Margin="10" Background="#FF373744">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="58*"/>
+                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="39*"/>
+                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Effect>
+                        <DropShadowEffect Color="#FF30303D" Opacity="0.2" BlurRadius="3"/>
+                    </Grid.Effect>
+
+                    <Viewbox Stretch="Uniform" Grid.Row="0" HorizontalAlignment="Center">
+                        <TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="Detalles"  Foreground="White" />
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center" >
+                        <TextBlock>
+                                <TextBlock x:Name="BestEmployeeTotal" TextWrapping="Wrap" Text="[2,100]"  Foreground="White" />
+                        </TextBlock>
+                    </Viewbox>
+                    <Viewbox Stretch="Uniform" Grid.Row="2" HorizontalAlignment="Center" >
+                        <TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="Total En Turno"  Foreground="#FF808083" />
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox Stretch="Uniform" Grid.Row="3" HorizontalAlignment="Center">
+                        <TextBlock>
+                                <TextBlock x:Name="BestEmployeeSubProcess" TextWrapping="Wrap" Text="[RAM 9]"  Foreground="White" />
+                        </TextBlock>
+                    </Viewbox>
+                    <Viewbox Stretch="Uniform" Grid.Row="4" HorizontalAlignment="Center">
+                        <TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="Estación"  Foreground="#FF808083" />
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="10,0,0,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28*"/>
+                    <RowDefinition Height="331*"/>
+                </Grid.RowDefinitions>
+
+                <Viewbox Stretch="Uniform" Margin="10,5,0,3" Grid.Row="0" HorizontalAlignment="Left">
+                    <TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="Lista de Asociados"  Foreground="White" />
+                    </TextBlock>
+                </Viewbox>
+
+                <Grid Margin="10" Background="#FF373744" Grid.Row="1">
+                    <Grid.Effect>
+                        <DropShadowEffect Color="#FF30303D" Opacity="0.2" BlurRadius="3"/>
+                    </Grid.Effect>
+                    <Grid Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <!--Top 1-->
+                        <Border BorderBrush="#FF444444" BorderThickness="0, 0, 0, 1" Grid.Row="0" VerticalAlignment="Bottom"/>
+                        <Grid x:Name="gTop1" Grid.Row="0" Margin="0,2,0,5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33*"/>
+                                <ColumnDefinition Width="56*"/>
+                                <ColumnDefinition Width="250*"/>
+                                <ColumnDefinition Width="87*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Text="2"  Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Image x:Name="imgTop1" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"/>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop1Name" TextWrapping="Wrap" Text="[Asociado 1]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop1SubProcess" TextWrapping="Wrap" Text="[RAM 4]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop1Total" TextWrapping="Wrap" Text="[1,500]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+                        </Grid>
+
+                        <!--Top 2-->
+                        <Border BorderBrush="#FF444444" BorderThickness="0, 0, 0, 1" Grid.Row="1" VerticalAlignment="Bottom"/>
+                        <Grid x:Name="gTop2" Grid.Row="1" Margin="0,4,0,4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33*"/>
+                                <ColumnDefinition Width="56*"/>
+                                <ColumnDefinition Width="250*"/>
+                                <ColumnDefinition Width="87*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Text="3"  Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Image x:Name="imgTop2" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"/>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop2Name" TextWrapping="Wrap" Text="[Asociado 2]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop2SubProcess" TextWrapping="Wrap" Text="[RAM 1]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop2Total" TextWrapping="Wrap" Text="[1,400]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+                        </Grid>
+
+                        <!--Top 3-->
+                        <Border BorderBrush="#FF444444" BorderThickness="0, 0, 0, 1" Grid.Row="2" VerticalAlignment="Bottom"/>
+                        <Grid x:Name="gTop3" Grid.Row="2" Margin="0,4,0,4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33*"/>
+                                <ColumnDefinition Width="56*"/>
+                                <ColumnDefinition Width="250*"/>
+                                <ColumnDefinition Width="87*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Text="4"  Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Image x:Name="imgTop3" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"/>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop3Name" TextWrapping="Wrap" Text="[Asociado 7]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop3SubProcess" TextWrapping="Wrap" Text="[RAM 6]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop3Total" TextWrapping="Wrap" Text="[1,300]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+                        </Grid>
+
+                        <!--Top 4-->
+                        <Border BorderBrush="#FF444444" BorderThickness="0, 0, 0, 1" Grid.Row="3" VerticalAlignment="Bottom"/>
+                        <Grid x:Name="gTop4" Grid.Row="3" Margin="0,4,0,4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33*"/>
+                                <ColumnDefinition Width="56*"/>
+                                <ColumnDefinition Width="250*"/>
+                                <ColumnDefinition Width="87*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Text="5"  Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Image x:Name="imgTop4" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"/>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop4Name" TextWrapping="Wrap" Text="[Asociado 4]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop4SubProcess" TextWrapping="Wrap" Text="[RAM 2]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop4Total" TextWrapping="Wrap" Text="[1,200]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+                        </Grid>
+
+                        <!--Top 4-->
+                        <Grid x:Name="gTop5" Grid.Row="4" Margin="0,4,0,4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="13*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33*"/>
+                                <ColumnDefinition Width="56*"/>
+                                <ColumnDefinition Width="250*"/>
+                                <ColumnDefinition Width="87*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock TextWrapping="Wrap" Text="6"  Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Image x:Name="imgTop5" Source="/ChronosDashboards;component/Images/userIcon.png" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"/>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop5Name" TextWrapping="Wrap" Text="[Asociado 5]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop5SubProcess" TextWrapping="Wrap" Text="[RAM 8]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center">
+                                <TextBlock>
+                                    <TextBlock x:Name="lblTop5Total" TextWrapping="Wrap" Text="[1,100]" Foreground="White" />
+                                </TextBlock>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{045C42CC-E460-4E18-B192-DFC134D020B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chronos.Modules.LabelManager</RootNamespace>
+    <AssemblyName>LabelManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisualEffects">
+      <HintPath>..\..\..\..\..\Desktop\VisualEffects.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LabelPrintingAuto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelPrintingAuto.Designer.cs">
+      <DependentUpon>LabelPrintingAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelPrintingManual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelPrintingManual.Designer.cs">
+      <DependentUpon>LabelPrintingManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_Box128.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_Box128.Designer.cs">
+      <DependentUpon>LabelTemplate_Box128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_Component128.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_Component128.Designer.cs">
+      <DependentUpon>LabelTemplate_Component128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_ComponentSet128.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_ComponentSet128.Designer.cs">
+      <DependentUpon>LabelTemplate_ComponentSet128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_SimpleBarCode128.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTemplates\LabelTemplate_SimpleBarCode128.Designer.cs">
+      <DependentUpon>LabelTemplate_SimpleBarCode128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BarCodes.cs" />
+    <Compile Include="Manager\PrintLabel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RelabelingAuto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RelabelingAuto.Designer.cs">
+      <DependentUpon>RelabelingAuto.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LabelPrintingAuto.resx">
+      <DependentUpon>LabelPrintingAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelPrintingManual.resx">
+      <DependentUpon>LabelPrintingManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelTemplates\LabelTemplate_Box128.resx">
+      <DependentUpon>LabelTemplate_Box128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelTemplates\LabelTemplate_Component128.resx">
+      <DependentUpon>LabelTemplate_Component128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelTemplates\LabelTemplate_ComponentSet128.resx">
+      <DependentUpon>LabelTemplate_ComponentSet128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelTemplates\LabelTemplate_SimpleBarCode128.resx">
+      <DependentUpon>LabelTemplate_SimpleBarCode128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelabelingAuto.resx">
+      <DependentUpon>RelabelingAuto.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Shared\Shared.csproj">
+      <Project>{7DE4331F-488C-4FE6-9DF8-C0A522B9C8AB}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBAccess\DBAccess.csproj">
+      <Project>{5e180357-b955-4855-9ac1-e3b1d6ee4658}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Chronos.Data.Shared.Model.Template_Box128_Data.datasource" />
+    <None Include="Properties\DataSources\Chronos.Data.Shared.Model.Template_Component128_Data.datasource" />
+    <None Include="Properties\DataSources\Chronos.Data.Shared.Model.Template_ComponentSet128_Data.datasource" />
+    <None Include="Properties\DataSources\Chronos.Data.Shared.Model.Template_SimpleBarCode128_Data.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

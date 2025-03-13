@@ -1,0 +1,9 @@
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\bin\Debug\DBAccess.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\bin\Debug\DBAccess.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\obj\Debug\DBAccess.csproj.CoreCompileInputs.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\obj\Debug\DBAccess.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\obj\Debug\DBAccess.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\bin\Debug\Shared.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\bin\Debug\Shared.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\obj\Debug\DBAccess.csprojAssemblyReference.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\DBAccess\obj\Debug\DBAccess.csproj.CopyComplete

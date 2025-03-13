@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8FD7A9E-6C8B-4A57-8246-976BC21C185F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chronos</RootNamespace>
+    <AssemblyName>Chronos</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Chronos.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StationHolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationHolder.Designer.cs">
+      <DependentUpon>StationHolder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StationHolder.resx">
+      <DependentUpon>StationHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Consolidation\Consolidation.csproj">
+      <Project>{250af479-1854-4b29-9d35-21db4326be15}</Project>
+      <Name>Consolidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\IkarusWS\IkarusWS.csproj">
+      <Project>{0425a603-5214-40db-a256-13a8a4bbeb26}</Project>
+      <Name>IkarusWS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Shared\Shared.csproj">
+      <Project>{7de4331f-488c-4fe6-9df8-c0a522b9c8ab}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DBAccess\DBAccess.csproj">
+      <Project>{5e180357-b955-4855-9ac1-e3b1d6ee4658}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LabelManager\LabelManager.csproj">
+      <Project>{045c42cc-e460-4e18-b192-dfc134d020b9}</Project>
+      <Name>LabelManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Machinery\AndonLights\AndonLights.csproj">
+      <Project>{e2d106af-4609-42c5-9470-bbe6366d677b}</Project>
+      <Name>AndonLights</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StationReports\StationReports.csproj">
+      <Project>{50b84aee-ee94-4b94-88dc-32d533c64f71}</Project>
+      <Name>StationReports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Stations\DownTime\DownTime.csproj">
+      <Project>{b87c1c6e-118c-40ca-8cc2-821e8d2917f6}</Project>
+      <Name>DownTime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Stations\EmployeeValidation\EmployeeValidation.csproj">
+      <Project>{07312200-6433-4a2e-bd5d-32daa656c42a}</Project>
+      <Name>EmployeeValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Stations\Tracking\Tracking.csproj">
+      <Project>{a89a7be0-adea-4d34-9845-5bb57eb22fc5}</Project>
+      <Name>Tracking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chronos-Logo_1.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\certified.png" />
+    <None Include="Resources\chronos white light.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\cell.png" />
+    <None Include="Resources\facility.png" />
+    <None Include="Resources\chronos white light %2845%29.png" />
+    <None Include="Resources\StationIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

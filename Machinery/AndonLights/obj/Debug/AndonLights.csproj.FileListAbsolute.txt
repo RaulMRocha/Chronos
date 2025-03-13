@@ -1,0 +1,8 @@
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\bin\Debug\Ux64_dllc.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\bin\Debug\Ux64_dllc.lib
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\bin\Debug\AndonLights.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\bin\Debug\AndonLights.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\obj\Debug\AndonLights.csproj.CoreCompileInputs.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\obj\Debug\AndonLights.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\obj\Debug\AndonLights.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Machinery\AndonLights\obj\Debug\AndonLights.csprojAssemblyReference.cache

@@ -1,0 +1,15 @@
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\RackManagement.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\RackManagement.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\IkarusWS.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\Newtonsoft.Json.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\IkarusWS.pdb
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\IkarusWS.dll.config
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.csprojAssemblyReference.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\Chronos.Stations.RackManagement.RackManagement.resources
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.csproj.GenerateResource.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.csproj.CoreCompileInputs.cache
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.csproj.CopyComplete
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.dll
+C:\Users\martra\Documents\Visual Studio 2017\Projects\Chronos\Stations\RackManagement\obj\Debug\RackManagement.pdb
