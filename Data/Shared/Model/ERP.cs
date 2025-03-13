@@ -2,7 +2,7 @@
 {
     public class ERP
     {
-        public class M1P_WorkOrderHeader
+        public class WorkOrderHeader
         {
             public string M1RUN_RunNumber { get; set; }
             public string M1MWO_MFGOrderNumber { get; set; }

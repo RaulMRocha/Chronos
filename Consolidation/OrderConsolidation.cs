@@ -259,7 +259,7 @@ namespace Chronos.Modules.Consolidation
             }
 
             //Extract Data from FRN
-            //M1P_WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, WorkTag);
+            //WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, WorkTag);
             //List<SGP_WorkOrderSegments> WorkTagSegments = ERPLogic.GetBuildInstructions(_chronosGlobal, WorkTag);
             //SGP_WorkOrderSegments FRNSegmentsInfo = new SGP_WorkOrderSegments();
 

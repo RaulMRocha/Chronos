@@ -299,7 +299,7 @@ namespace Chronos.Modules.LabelManager
             }
             
             //Extract Data from FRN
-            M1P_WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, WorkTag);
+            WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, WorkTag);
             List<SGP_WorkOrderSegments> WorkTagSegments = ERPLogic.GetBuildInstructions(_chronosGlobal, WorkTag);
             SGP_WorkOrderSegments FRNSegmentsInfo = new SGP_WorkOrderSegments();
             TrackingLogs LastRecord = TrackingLogsLogic.GetRecordData(_chronosGlobal, LicensePlate);
@@ -603,7 +603,7 @@ namespace Chronos.Modules.LabelManager
                 int LabelsToPrint = 1;
 
                 //Extract Data from FRN
-                M1P_WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, _lastWorktag);
+                WorkOrderHeader WorkTagData = ERPLogic.GetMFGOrderNumberInfoByOrder(_chronosGlobal, _lastWorktag);
                 List<SGP_WorkOrderSegments> WorkTagSegments = ERPLogic.GetBuildInstructions(_chronosGlobal, _lastWorktag);
                 SGP_WorkOrderSegments FRNSegmentsInfo = new SGP_WorkOrderSegments();
                 TrackingLogs LastRecord = TrackingLogsLogic.GetRecordData(_chronosGlobal, _lastLicensePlate);

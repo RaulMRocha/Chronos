@@ -21,9 +21,9 @@ namespace Chronos.Data.DBAccess.BLogic
             return ERPData.GetBuildInstructions(chronosGlobal, WorkTag);
         }
 
-        public static M1P_WorkOrderHeader GetMFGOrderNumberInfoByOrder(IChronosGlobal chronosGlobal, string WorkTag)
+        public static WorkOrderHeader GetMFGOrderNumberInfoByOrder(IChronosGlobal chronosGlobal, string WorkTag)
         {
-            M1P_WorkOrderHeader ERPInfo = ERPData.GetMFGOrderNumberInfoByOrder(chronosGlobal, WorkTag);
+            WorkOrderHeader ERPInfo = ERPData.GetMFGOrderNumberInfoByOrder(chronosGlobal, WorkTag);
             if (ERPInfo == null)
                 ERPData.UpdateERPData(chronosGlobal, WorkTag);
 
